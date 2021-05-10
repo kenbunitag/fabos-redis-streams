@@ -28,7 +28,7 @@ class RedisClient:
         return RedisClient(name, r)
 
     def log(self, msg):
-        print(f"[{self.name:<9} {(time.time() - overall_start)*1000:5.1f}] {msg}")
+        print(f"[{self.name:<9} {(time.time() - overall_start)*1000:6.1f}] {msg}")
 
     async def produce(self, produce_range, delay = 0.5):
         for i in produce_range:

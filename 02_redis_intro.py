@@ -30,7 +30,7 @@ async def scan(r : aioredis.Redis):
 async def main():
     r : aioredis.Redis = await aioredis.create_redis(f'redis://{REDIS_HOST}:{REDIS_PORT}/0')
 
-    r.flushdb()
+    await r.flushdb()
 
     await r.set("mykey", "someval")
     print(await r.get("mykey"))
