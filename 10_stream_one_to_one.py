@@ -1,14 +1,12 @@
-import aioredis
-import os
 import asyncio
-from io import BytesIO
-import msgpack
-import numpy as np
+import os
 import time
-from typing import List
-from utils import RedisClient
-import utils
+
+import aioredis
 import aioredis.commands.transaction
+
+import utils
+from utils import RedisClient
 
 REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
 REDIS_PORT = os.environ.get("REDIS_PORT", "6379")

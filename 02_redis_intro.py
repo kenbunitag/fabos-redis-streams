@@ -1,9 +1,8 @@
-import aioredis
-import os
 import asyncio
-from io import BytesIO
+import os
+
+import aioredis
 import msgpack
-import numpy as np
 
 REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
 REDIS_PORT = os.environ.get("REDIS_PORT", "6379")

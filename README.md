@@ -8,7 +8,7 @@ docker run -p 6379:6379 --name some-redis -d redis
 
 conda install -c conda-forge aioredis msgpack-python numpy
 # OR
-pip install aioredis msgpack-python numpy
+pip install -r requirements.txt
 ```
 
 
@@ -23,3 +23,4 @@ pip install aioredis msgpack-python numpy
 - Delay benchmark
 - Batch write 1GB
 - Batch read 1GB
+
